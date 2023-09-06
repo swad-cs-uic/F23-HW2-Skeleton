@@ -78,8 +78,8 @@ As with other assignments, any reasonable-quality test cases that you provide to
 | List Requests - Complete the functionality of GPT-484                                    | 10     |
 | List Requests - Complete and Cancel Functions along with displaying of feedback requests | 10     |
 | Add Request - Create and Reset functions properly implemented                            | 10     |
-| Testing all of above test cases of the live website                                      | 30     |
+| Testing all of the above test cases over live website                                    | 30     |
 
 ## Due date
 
-This assignment is due on Friday, October 7th, at 1:59PM. You are highly encouraged to get started early.
+This assignment is due on Friday, September 29th, at 3:00PM. You are highly encouraged to get started early.
