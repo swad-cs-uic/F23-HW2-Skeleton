@@ -1,0 +1,20 @@
+[
+  {
+    "emailId": "chris@new.schema",
+    "ldescription": "The existing color schema can be made more attractive.",
+    "name": "Chris",
+    "sdescription": "Schema"
+  },
+  {
+    "emailId": "saurav@saurav.com",
+    "ldescription": "Maybe we can keep context live in the chat",
+    "name": "Saurav",
+    "sdescription": "Context"
+  },
+  {
+    "emailId": "new@feature.com",
+    "ldescription": "May be we can add recommendations?",
+    "name": "Feature",
+    "sdescription": "Feature Request"
+  }
+]
