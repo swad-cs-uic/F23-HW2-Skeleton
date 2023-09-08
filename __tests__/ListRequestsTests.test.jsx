@@ -1,7 +1,7 @@
 // Imports
 import { beforeEach, describe, expect, test } from "vitest";
 import { render, screen, fireEvent } from "@testing-library/react";
-import App from "../App";
+import App from "../src/App";
 import { BrowserRouter } from "react-router-dom";
 import userEvent from "@testing-library/user-event";
 import React from "react";
@@ -16,7 +16,7 @@ beforeEach(() => {
   render(
     <BrowserRouter>
       <App />
-    </BrowserRouter>,
+    </BrowserRouter>
   );
 });
 
@@ -44,7 +44,7 @@ describe("Testing List Request Complete Cancel Functions -> 312 App", () => {
           .innerHTML.includes("Feature") &&
         document
           .getElementById("main-table-body")
-          .innerHTML.includes("Feature Request"),
+          .innerHTML.includes("Feature Request")
     ).toBe(false);
   });
 
@@ -67,7 +67,7 @@ describe("Testing List Request Complete Cancel Functions -> 312 App", () => {
       tableDOM.rows[tableLength - 1].innerHTML.includes(iname) &&
         tableDOM.rows[tableLength - 1].innerHTML.includes(isdesc) &&
         tableDOM.rows[tableLength - 1].innerHTML.includes(ilongdesc) &&
-        tableDOM.rows[tableLength - 1].innerHTML.includes(iemailId),
+        tableDOM.rows[tableLength - 1].innerHTML.includes(iemailId)
     );
 
     // Goto feedback request page
@@ -83,8 +83,8 @@ describe("Testing List Request Complete Cancel Functions -> 312 App", () => {
       document
         .getElementById("main-table-body")
         .rows[trRows - 1].outerHTML.includes(
-          `style="text-decoration: line-through;"`,
-        ),
+          `style="text-decoration: line-through;"`
+        )
     ).toBe(true);
   });
 
@@ -106,7 +106,7 @@ describe("Testing List Request Complete Cancel Functions -> 312 App", () => {
         document
           .getElementById("main-table-body")
           .innerHTML.includes(rlongdesc) &&
-        document.getElementById("main-table-body").innerHTML.includes(remailId),
+        document.getElementById("main-table-body").innerHTML.includes(remailId)
     ).toBe(true);
 
     let cancelButtons = await screen.findAllByLabelText("cancel");
@@ -120,7 +120,7 @@ describe("Testing List Request Complete Cancel Functions -> 312 App", () => {
         document
           .getElementById("main-table-body")
           .innerHTML.includes(rlongdesc) &&
-        document.getElementById("main-table-body").innerHTML.includes(remailId),
+        document.getElementById("main-table-body").innerHTML.includes(remailId)
     ).toBe(false);
   });
 });

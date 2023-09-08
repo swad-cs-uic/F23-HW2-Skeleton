@@ -1,7 +1,7 @@
 // Imports
 import { beforeEach, describe, expect, test } from "vitest";
 import { render, screen, fireEvent } from "@testing-library/react";
-import App from "../App";
+import App from "../src/App";
 import { BrowserRouter } from "react-router-dom";
 import userEvent from "@testing-library/user-event";
 import React from "react";
@@ -16,7 +16,7 @@ beforeEach(() => {
   render(
     <BrowserRouter>
       <App />
-    </BrowserRouter>,
+    </BrowserRouter>
   );
 });
 
@@ -33,22 +33,20 @@ describe("Testing Create and List Request Functionality -> 312 App", () => {
     await userEvent.click(screen.getByText("List requests"));
     expect(document.getElementById("main-table-body").rows.length).toBe(3);
     expect(
-      document.getElementById("main-table-body").rows[0].cells.length,
+      document.getElementById("main-table-body").rows[0].cells.length
     ).toBe(6);
     expect(
-      document.getElementById("main-table-body").rows[1].cells.length,
+      document.getElementById("main-table-body").rows[1].cells.length
     ).toBe(6);
     expect(
-      document.getElementById("main-table-body").rows[2].cells.length,
+      document.getElementById("main-table-body").rows[2].cells.length
     ).toBe(6);
     expect(
       document.getElementById("main-table-body").innerHTML.includes("Chris") &&
         document
           .getElementById("main-table-body")
           .innerHTML.includes("Saurav") &&
-        document
-          .getElementById("main-table-body")
-          .innerHTML.includes("Feature"),
+        document.getElementById("main-table-body").innerHTML.includes("Feature")
     );
 
     await createServiceRequest(iname, isdesc, ilongdesc, iemailId);
@@ -56,7 +54,7 @@ describe("Testing Create and List Request Functionality -> 312 App", () => {
 
     expect(document.getElementById("main-table-body").rows.length).toBe(4);
     expect(
-      document.getElementById("main-table-body").rows[3].cells.length,
+      document.getElementById("main-table-body").rows[3].cells.length
     ).toBe(6);
     expect(
       document.getElementById("main-table-body").innerHTML.includes(iname) &&
@@ -64,7 +62,7 @@ describe("Testing Create and List Request Functionality -> 312 App", () => {
         document
           .getElementById("main-table-body")
           .innerHTML.includes(ilongdesc) &&
-        document.getElementById("main-table-body").innerHTML.includes(iemailId),
+        document.getElementById("main-table-body").innerHTML.includes(iemailId)
     ).toBe(true);
 
     // Get the length of rows
@@ -73,10 +71,10 @@ describe("Testing Create and List Request Functionality -> 312 App", () => {
 
     // Check the last row and see if contains two buttons
     expect(
-      tableDOM.rows[tableLength - 1].cells[0].innerHTML.includes("<button"),
+      tableDOM.rows[tableLength - 1].cells[0].innerHTML.includes("<button")
     ).toBe(true);
     expect(
-      tableDOM.rows[tableLength - 1].cells[5].innerHTML.includes("<button"),
+      tableDOM.rows[tableLength - 1].cells[5].innerHTML.includes("<button")
     ).toBe(true);
   });
 
@@ -92,7 +90,7 @@ describe("Testing Create and List Request Functionality -> 312 App", () => {
       document.getElementById("name").value == "" &&
         document.getElementById("sdescription").value == "" &&
         document.getElementById("emailId").value == "" &&
-        document.getElementById("ldescription").value == "",
+        document.getElementById("ldescription").value == ""
     ).toBe(true);
 
     // Click on the list requests button and go to the create service / add service
@@ -119,7 +117,7 @@ describe("Testing Create and List Request Functionality -> 312 App", () => {
       document.getElementById("name").value.includes(iname) &&
         document.getElementById("sdescription").value.includes(isdesc) &&
         document.getElementById("ldescription").value.includes(ilongdesc) &&
-        document.getElementById("emailId").value.includes(iemailId),
+        document.getElementById("emailId").value.includes(iemailId)
     ).toBe(true);
 
     await userEvent.click(screen.getByText("Reset Form"));
@@ -128,7 +126,7 @@ describe("Testing Create and List Request Functionality -> 312 App", () => {
       document.getElementById("name").value == "" &&
         document.getElementById("sdescription").value == "" &&
         document.getElementById("emailId").value == "" &&
-        document.getElementById("ldescription").value == "",
+        document.getElementById("ldescription").value == ""
     ).toBe(true);
   });
 });

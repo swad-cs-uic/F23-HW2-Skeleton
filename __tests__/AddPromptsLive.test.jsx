@@ -1,6 +1,6 @@
 import { chromium } from "playwright";
 import { expect, beforeAll, afterAll, test, describe } from "vitest";
-import { website } from "../../student.json";
+import { website } from "../student.json";
 let browser;
 let page;
 

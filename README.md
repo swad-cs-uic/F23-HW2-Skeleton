@@ -79,6 +79,7 @@ As with other assignments, any reasonable-quality test cases that you provide to
 | List Requests - Complete and Cancel Functions along with displaying of feedback requests | 10     |
 | Add Request - Create and Reset functions properly implemented                            | 10     |
 | Testing all of the above test cases over live website                                    | 30     |
+| CI Tests (Lint, Format, Typecheck)                                                       | 3      |
 
 ## Due date
 

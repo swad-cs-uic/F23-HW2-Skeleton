@@ -5,7 +5,7 @@ import {
   randomPoolOfEmailIds,
   createServiceRequestLive,
 } from "./testUtils";
-import { website } from "../../student.json";
+import { website } from "../student.json";
 
 let browser;
 let page;

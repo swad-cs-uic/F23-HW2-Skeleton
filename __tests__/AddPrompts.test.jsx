@@ -2,14 +2,14 @@ import React from "react";
 import { expect, test, beforeEach, describe } from "vitest";
 import { render, screen, fireEvent } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import App from "../App";
+import App from "../src/App";
 import { BrowserRouter } from "react-router-dom";
 
 beforeEach(() => {
   render(
     <BrowserRouter>
       <App />
-    </BrowserRouter>,
+    </BrowserRouter>
   );
 });
 
@@ -30,7 +30,7 @@ describe("Check the functionality of React GPT-484", () => {
 
     // Check whether there is a list item with value == "New Prompt 1" present in the history section
     const foundItem = Array.from(listItems).find(
-      (item) => item.textContent.trim() === "New Prompt 1",
+      (item) => item.textContent.trim() === "New Prompt 1"
     );
 
     //   console.log(foundItem);
@@ -44,7 +44,7 @@ describe("Check the functionality of React GPT-484", () => {
     let historyList = screen.getByRole("history-pane");
     let listItems = historyList.querySelectorAll("li");
     let foundItem = Array.from(listItems).find(
-      (item) => item.textContent.trim() === "New Prompt 1",
+      (item) => item.textContent.trim() === "New Prompt 1"
     );
 
     expect(foundItem).not.toBeUndefined();
@@ -58,7 +58,7 @@ describe("Check the functionality of React GPT-484", () => {
     historyList = screen.getByRole("history-pane");
     listItems = historyList.querySelectorAll("li");
     foundItem = Array.from(listItems).find(
-      (item) => item.textContent.trim() === "New Prompt inside same parent",
+      (item) => item.textContent.trim() === "New Prompt inside same parent"
     );
 
     expect(foundItem).toBeUndefined();
@@ -71,7 +71,7 @@ describe("Check the functionality of React GPT-484", () => {
     let historyList = screen.getByRole("history-pane");
     let listItems = historyList.querySelectorAll("li");
     let foundItem = Array.from(listItems).find(
-      (item) => item.textContent.trim() === "New Prompt 1",
+      (item) => item.textContent.trim() === "New Prompt 1"
     );
 
     expect(foundItem).not.toBeUndefined();
@@ -84,7 +84,7 @@ describe("Check the functionality of React GPT-484", () => {
     historyList = screen.getByRole("history-pane");
     listItems = historyList.querySelectorAll("li");
     foundItem = Array.from(listItems).find(
-      (item) => item.textContent.trim() === "New Prompt inside same parent",
+      (item) => item.textContent.trim() === "New Prompt inside same parent"
     );
     expect(foundItem).toBeUndefined();
 
@@ -93,8 +93,7 @@ describe("Check the functionality of React GPT-484", () => {
     expect(Array.from(listItems).length).equals(4);
 
     foundItem = Array.from(listItems).find(
-      (item) =>
-        item.textContent.trim() === "User:New Prompt inside same parent",
+      (item) => item.textContent.trim() === "User:New Prompt inside same parent"
     );
 
     expect(foundItem).not.toBeUndefined();
@@ -107,7 +106,7 @@ describe("Check the functionality of React GPT-484", () => {
     let historyList = screen.getByRole("history-pane");
     let listItems = historyList.querySelectorAll("li");
     let foundItem = Array.from(listItems).find(
-      (item) => item.textContent.trim() === "New Prompt 1",
+      (item) => item.textContent.trim() === "New Prompt 1"
     );
 
     expect(foundItem).not.toBeUndefined();
@@ -120,7 +119,7 @@ describe("Check the functionality of React GPT-484", () => {
     historyList = screen.getByRole("history-pane");
     listItems = historyList.querySelectorAll("li");
     foundItem = Array.from(listItems).find(
-      (item) => item.textContent.trim() === "New Prompt inside same parent",
+      (item) => item.textContent.trim() === "New Prompt inside same parent"
     );
 
     expect(foundItem).toBeUndefined();
@@ -135,7 +134,7 @@ describe("Check the functionality of React GPT-484", () => {
     // Check if the new prompt was added in the history section.
     expect(Array.from(listItems).length).toBeGreaterThan(1);
     foundItem = Array.from(listItems).find(
-      (item) => item.textContent.trim() === "New Prompt 2",
+      (item) => item.textContent.trim() === "New Prompt 2"
     );
 
     expect(foundItem).not.toBeUndefined();
