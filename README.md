@@ -1,19 +1,4 @@
----
-title: homework 2 - React GPT-484
-description: Building a static app for GPT-484 with feedbacks.
-due: 2022-09-29T15:00:00-5:00
-github_link: https://classroom.github.com/a/3NWauEwD
-release: 2022-09-11
----
-
-import Link from '@docusaurus/Link';
-import site from '@site/course.json'
-
 # Homework2 - React GPT-484
-
-## Cloning your homework assignment
-
-[This GitHub Classroom link](https://classroom.github.com/a/3NWauEwD) will allow you to accept the assignment.
 
 ## Installing required packages
 
@@ -64,12 +49,11 @@ As with other assignments, any reasonable-quality test cases that you provide to
 
 ## Deploying your website over Netlify.
 
-1.  Goto: [https://github.com/swad-cs-uic/homework2/](https://github.com/swad-cs-uic/homework2/)
-2.  Click Use this template to create your own **PRIVATE** repository. (You must create a Private Repository for academic integrity)
-3.  Clone this / Set up your created Repository, on your local.
-4.  Make changes to the code base as per the homework requirements.
-5.  Commit and push your changes to your repo.
-6.  Open Netlify and connect your GitHub repository and you're all set.
+1.  Click Use this template to create your own **PRIVATE** repository. (You must create a Private Repository for academic integrity)
+2.  Clone this / Set up your created Repository, on your local.
+3.  Make changes to the code base as per the homework requirements.
+4.  Commit and push your changes to your repo.
+5.  Open Netlify and connect your GitHub repository and you're all set.
 
 ## Points
 
